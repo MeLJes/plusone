@@ -1,0 +1,28 @@
+.header {
+  padding: px-to-rem(25) 0;
+  width: 100%;
+
+  // @include position(overlay, fixed, 0, 0, auto, 0);
+  @include tr;
+
+  .container {
+    @include flex (flex, space-between, center);
+  }
+  .logo {
+    img {
+      max-width: px-to-rem(130);
+    }
+  }
+}
+
+@media screen and (min-width: breakpoint(zero)) and (max-width: breakpoint(extra-small-max)) {
+  .header {
+    padding: px-to-rem(15) 0 px-to-rem(10);
+
+    .logo {
+      img {
+        max-width: px-to-rem(75);
+      }
+    }
+  }
+}

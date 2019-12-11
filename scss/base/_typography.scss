@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Avenir-Regular";
+  font-weight: weight(regular);
+  src: url("../fonts/AvenirNextCyr-Regular.eot");
+  src: url("../fonts/AvenirNextCyr-Regular.woff") format("woff"),
+       url("../fonts/AvenirNextCyr-Regular.otf") format("opentype"),
+       url("../fonts/AvenirNextCyr-Regular.svg") format("svg");
+}
+@font-face {
+  font-family: "Avenir-Demi";
+  font-weight: weight(medium);
+  src: url("../fonts/AvenirNextCyr-Demi.eot");
+  src: url("../fonts/AvenirNextCyr-Demi.woff") format("woff"),
+       url("../fonts/AvenirNextCyr-Demi.otf") format("opentype"),
+       url("../fonts/AvenirNextCyr-Demi.svg") format("svg");
+}
+
+html {
+  font-family: $font-default;
+  font-size: 100%;
+  font-weight: normal;
+}
+body {
+  font-size: px-to-rem(18);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+p, span {
+  line-height: 1;
+}
+
+@media screen and (min-width: breakpoint(zero)) and (max-width: breakpoint(extra-small-max)) {
+  body {
+    font-size: px-to-rem(16);
+  }
+}

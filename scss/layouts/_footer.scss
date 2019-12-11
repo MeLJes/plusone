@@ -1,0 +1,66 @@
+.footer {
+  background: color(extra);
+  padding: px-to-rem(25) 0;
+  width: 100%;
+
+  .container {
+    font-family: "Avenir-Demi";
+    font-size: px-to-rem(14);
+
+    @include flex(flex, space-between, center);
+  }
+  .place {
+    line-height: px-to-rem(18);
+  }
+  .social {
+    @include flex(flex, flex-end, center);
+
+    a {
+      display: block;
+
+      @include square(28, px);
+
+      &:not(:first-child) {
+        margin-left: px-to-rem(10);
+      }
+      &:hover {
+        svg {
+          transform: scale(1.1);
+        }
+      }
+      svg {
+        @include tr;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: breakpoint(zero)) and (max-width: breakpoint(extra-small-max)) {
+  .footer {
+    padding: px-to-rem(30) 0;
+
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .place {
+      padding-bottom: px-to-rem(55);
+      margin-bottom: px-to-rem(27);
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        background: color(default);
+
+        width: px-to-rem(44);
+        height: px-to-rem(2);
+        transform: translateX(-50%);
+
+        position: absolute;
+        top: 100%;
+        left: 50%;
+      }
+    }
+  }
+}
